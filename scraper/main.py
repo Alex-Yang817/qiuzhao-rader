@@ -137,7 +137,7 @@ def merge(old_items: list, fresh: list, today: str) -> tuple:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pages", type=int, default=3)
-    ap.add_argument("--out", default=os.path.join("site", "data"))
+    ap.add_argument("--out", default=os.path.join("data"))
     args = ap.parse_args()
 
     out_dir = args.out
