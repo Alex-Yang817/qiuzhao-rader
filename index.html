@@ -259,7 +259,7 @@
 
 <footer>
   <div class="foot-note">
-    <b>数据与自动更新说明：</b>① 岗位库(<code>site/data/jobs.json</code>)为<b>人工核实的结构化数据</b>，每条来自企业官网/官方招聘平台公告(种子数据：2026-09-05 核实)；② <b>官方公告动态</b>(<code>site/data/announcements.json</code>)由 GitHub Actions 每天自动抓取<b>国务院国资委官网「央企招聘」栏目</b>(www.sasac.gov.cn)生成并推送到本站。<br>
+    <b>数据与自动更新说明：</b>① 岗位库(<code>data/jobs.json</code>)为<b>人工核实的结构化数据</b>，每条来自企业官网/官方招聘平台公告(种子数据：2026-09-05 核实)；② <b>官方公告动态</b>(<code>data/announcements.json</code>)由 GitHub Actions 每天自动抓取<b>国务院国资委官网「招聘」栏目</b>与<b>上海国资委官网「国企招聘」栏目</b>生成并推送到本站，每条标注来源渠道。<br>
     <b>为什么岗位卡不能"全自动解析"：</b>企业官网普遍为动态页面或带反爬(电信官网对程序返回 412、国家电网需安全验证)，程序无法稳定读懂每家报名页。报名截止、专业方向、港澳学历适用性等关键字段仍需按官方公告<b>人工核实后维护进 jobs.json</b>——不做机器臆断，这是信息可靠性的底线。<br>
     <b>提示：</b>收藏与专业档案仅保存在本机浏览器(localStorage)；报名一律通过卡片内官方链接，谨防收费骗局。
   </div>
@@ -508,7 +508,7 @@ function renderAnn(){
   const p=$("#annPanel"); if(!p) return;
   const items=ann&&Array.isArray(ann.items)?ann.items:[];
   if(!items.length){
-    $("#annRow").innerHTML='<div class="ann-empty">'+(lastRun?"暂无官方公告动态":"尚未完成首次自动采集 —— 部署 GitHub Actions 后，这里将每天出现国资委官网发布的央企校招公告。")+'</div>';
+    $("#annRow").innerHTML='<div class="ann-empty">'+(lastRun?"暂无官方公告动态":"尚未完成首次自动采集 —— 部署 GitHub Actions 后，这里将每天出现官方发布的央企与上海国企校招公告。")+'</div>';
     $("#annTime").textContent=lastRun?("上次采集："+lastRun.ran_at.replace("T"," ").slice(0,16)):"等待首次自动采集…";
     p.style.display="block"; return;
   }
@@ -518,9 +518,9 @@ function renderAnn(){
     <a class="ann-card" href="${esc(it.url)}" target="_blank" rel="noopener" title="打开官方原文">
       <div class="a-t">${esc(it.title)}</div>
       <div class="a-m"><span class="badge k-${esc(it.kind||"other")}">${it.kind==="campus"?"校招":"招聘"}</span><span>${esc(it.date)}</span>${it.first_seen===today?'<span class="a-new">NEW</span>':""}</div>
-      <div style="font-size:11.5px;color:#7a8694">${esc(it.org||"")} · 国资委官网</div>
+      <div style="font-size:11.5px;color:#7a8694">${esc(it.org||"")} · ${esc(it.channel||"官方公告")}</div>
     </a>`).join("");
-  $("#annSrc").textContent="来源："+esc(ann.source||"国资委官网");
+  $("#annSrc").textContent="来源："+esc(ann.source||"官方渠道");
   $("#annNew").textContent=(lastRun&&lastRun.new_count>0)?("今日新增 "+lastRun.new_count+" 条"):"";
   $("#annTime").textContent=lastRun?("上次采集："+lastRun.ran_at.replace("T"," ").slice(0,16)):"";
   p.style.display="block";

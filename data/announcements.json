@@ -1,9 +1,12 @@
 {
- "source": "国务院国资委官网·央企招聘栏目(官方)",
- "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/index.html",
- "updated_at": "2026-09-05T11:24:28+08:00",
+ "source": "国务院国资委官网·招聘栏目 / 上海市国资委官网·国企招聘栏目",
+ "sources": [
+  "国务院国资委官网·招聘栏目",
+  "上海市国资委官网·国企招聘栏目"
+ ],
+ "updated_at": "2026-09-05T12:41:41+08:00",
  "updated_date": "2026-09-05",
- "campus_count": 17,
+ "campus_count": 22,
  "items": [
   {
    "title": "陕西飞机工业有限责任公司2027届校园招聘正式启动",
@@ -12,8 +15,9 @@
    "date": "2026-09-04",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中通服供应链2027年校园招聘火热进行中",
@@ -22,8 +26,9 @@
    "date": "2026-09-04",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国兵器工业第二〇八研究所2027届高校精英招募",
@@ -32,7 +37,19 @@
    "date": "2026-09-03",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
+  },
+  {
+   "title": "华谊集团2027届校园招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260903/a395e36ff1094b42ada2d2ea3c6d4a69.html",
+   "org": "华谊集团",
+   "date": "2026-09-03",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
    "last_seen": "2026-09-05"
   },
   {
@@ -42,8 +59,9 @@
    "date": "2026-09-02",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "航天科工2027届秋季招聘全面启动",
@@ -52,8 +70,9 @@
    "date": "2026-09-02",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中电信量子集团2027校园招聘正式启动",
@@ -62,8 +81,9 @@
    "date": "2026-09-02",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国航空工业集团2027届校园招聘正式启动",
@@ -72,8 +92,9 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "航空工业沈飞2027届校园招聘正式启动",
@@ -82,8 +103,9 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国航天科工二院二十三所2027届校园招聘正式开启",
@@ -92,8 +114,9 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "校园招聘！中远海运船员公司招录2027届航海类专业毕业生",
@@ -102,8 +125,9 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国建科公开招聘公告",
@@ -112,8 +136,9 @@
    "date": "2026-08-31",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国物流所属华贸物流社会招聘公告",
@@ -122,8 +147,9 @@
    "date": "2026-08-28",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国电信集团2027年度校园招聘全面启动",
@@ -132,8 +158,9 @@
    "date": "2026-08-27",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中电信人工智能科技（北京）有限公司2027届校园招聘全面启动",
@@ -142,8 +169,9 @@
    "date": "2026-08-27",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国电信天翼物联2027届“优才计划”校园招聘启动",
@@ -152,8 +180,9 @@
    "date": "2026-08-21",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "航空工业洪都2026年社会招聘公告",
@@ -162,8 +191,9 @@
    "date": "2026-08-20",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国电气装备集团国际电力有限公司招聘公告",
@@ -172,8 +202,9 @@
    "date": "2026-08-13",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国航空制造技术研究院2026年出站博士后、社会成熟人才招聘公告",
@@ -182,8 +213,9 @@
    "date": "2026-08-12",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国电信天翼云2027届校园招聘全面启动",
@@ -192,8 +224,9 @@
    "date": "2026-08-10",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国中化旗下中化数智关于开展社会招聘的公告",
@@ -202,8 +235,9 @@
    "date": "2026-08-06",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国中化控股有限责任公司《中国中化》报编辑部招聘公告",
@@ -212,8 +246,9 @@
    "date": "2026-08-04",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "$article.title",
@@ -222,8 +257,9 @@
    "date": "2026-07-31",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "航空工业直升机设计研究所2026年社会招聘公告",
@@ -232,8 +268,9 @@
    "date": "2026-07-30",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国航空发动机集团有限公司2027届校园招聘开启",
@@ -242,8 +279,9 @@
    "date": "2026-07-29",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中铝财务有限责任公司招聘公告",
@@ -252,8 +290,9 @@
    "date": "2026-07-28",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国融通集团2026届夏季校园招聘",
@@ -262,8 +301,9 @@
    "date": "2026-07-28",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国融通集团2026年社会招聘",
@@ -272,8 +312,9 @@
    "date": "2026-07-28",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国物流2026届夏季校园招聘正式启动",
@@ -282,8 +323,9 @@
    "date": "2026-07-28",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
-   "last_seen": "2026-09-05"
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
   },
   {
    "title": "中国一汽2026夏季校园招聘火热进行中",
@@ -292,7 +334,118 @@
    "date": "2026-07-24",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
+  },
+  {
+   "title": "上海市闵行区2026年区管国企公开招聘公告（第二批）",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260724/90c589d993c84a1f8a0c1e4c5392d0f2.html",
+   "org": "上海市闵行区",
+   "date": "2026-07-24",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "浦发银行2026年“Call浦新星”暑期实习生计划启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260624/0409b546bf604e9089c55ca087847d27.html",
+   "org": "浦发银行",
+   "date": "2026-06-24",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "2026年奉贤区区属国有企业招聘公告",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260609/bf16423cf48b4defa9b1c82b0b338804.html",
+   "org": "2026年奉贤区区属国有企业招聘",
+   "date": "2026-06-09",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "“夏日骐骥”上海国资国企2026年 暑期实习启动！",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260612/8187bf715aeb4626a2855f15bebb5460.html",
+   "org": "“夏日骐骥”上海国资国企",
+   "date": "2026-06-08",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "2026年青浦区区管企业统一招聘公告",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260526/383e7d09b67849b79f260c11c80dbc62.html",
+   "org": "2026年青浦区区管企业统一招聘",
+   "date": "2026-05-26",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "上海建科咨询集团暑期实习暨2027届秋招提前批次招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260525/aaaf1e33b4c042e087b15f638400ccd8.html",
+   "org": "上海建科咨询集团暑期实习暨",
+   "date": "2026-05-25",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "联和投资公司2026年博士后招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260520/24aadc76d45644f8825c733f991f3ad1.html",
+   "org": "联和投资公司",
+   "date": "2026-05-20",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "上汽集团2027届暑期实习生招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260519/d421e95c01714a78bcfb972dc8c6ecaf.html",
+   "org": "上汽集团",
+   "date": "2026-05-19",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "上海农商银行2027届暑期实习生招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260519/b53bdd320a214cbe9dded8d485b0702a.html",
+   "org": "上海农商银行",
+   "date": "2026-05-19",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "2026年崇明区区管企业公开招聘",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260515/5315060ec9a44997b28a413cac9c4b28.html",
+   "org": "2026年崇明区区管企业公开招聘",
+   "date": "2026-05-15",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
    "last_seen": "2026-09-05"
   },
   {
@@ -302,7 +455,52 @@
    "date": "2026-05-14",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 1,
+   "n_seen": 3,
+   "last_seen": "2026-09-05",
+   "channel": "央企·国资委官网"
+  },
+  {
+   "title": "上海银行2026年暑期实习生招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260512/4975f8dd7e6e4345a82ea75514e49158.html",
+   "org": "上海银行",
+   "date": "2026-05-12",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "2026年金山区区属国企公开招聘",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260511/99e574897e2a4869869ddaaf050ca17c.html",
+   "org": "2026年金山区区属国企公开招聘",
+   "date": "2026-05-11",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "锦江国际集团2026届春季校园招聘开启",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260422/32ec65803f1e482187e6ea97041c5c14.html",
+   "org": "锦江国际集团",
+   "date": "2026-04-22",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
+   "last_seen": "2026-09-05"
+  },
+  {
+   "title": "2026年闵行区区管国企公开招聘",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260420/3302cfa6cd62422abf28a922af381389.html",
+   "org": "2026年闵行区区管国企公开招聘",
+   "date": "2026-04-20",
+   "kind": "other",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-05",
+   "n_seen": 2,
    "last_seen": "2026-09-05"
   }
  ]
