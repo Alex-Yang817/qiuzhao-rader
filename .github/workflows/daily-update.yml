@@ -1,0 +1,45 @@
+name: daily-crawl-update
+
+# 每天自动运行一次：抓取国资委官网央企招聘栏目 → 更新 data/announcements.json 与 last_run.json
+# 有变化则自动提交推送 → 触发 GitHub Pages 重新发布 → 网站数据随之更新
+on:
+  schedule:
+    - cron: "20 6 * * *"   # 每天 06:20 UTC = 北京 14:20
+  workflow_dispatch: {}    # 支持在 GitHub 页面上手动触发一次
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-crawl
+  cancel-in-progress: true
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run scraper
+        run: python3 scraper/main.py --pages 3 --out site/data
+
+      - name: Commit & push if changed
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REF: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site/data/announcements.json site/data/last_run.json
+          if git diff --cached --quiet; then
+            echo "无数据变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "data: 每日自动采集 $(date -u +%Y-%m-%d)"
+          git push "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:"${REF}"
