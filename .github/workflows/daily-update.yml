@@ -27,7 +27,7 @@ jobs:
           python-version: "3.11"
 
       - name: Run scraper
-        run: python3 scraper/main.py --pages 3 --out data
+        run: python3 scraper/main.py --out data
 
       - name: Commit & push if changed
         env:
