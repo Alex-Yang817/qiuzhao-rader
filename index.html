@@ -603,8 +603,8 @@ document.addEventListener("click",e=>{
     store.set("favs",favs); render();
   }
   if(el.dataset.act==="detail" && card){
-    const id=+card.dataset.id;
-    const j=jobs.find(x=>x.id===id); if(j) openDetail(j);
+    const id=card.dataset.id;
+    const j=allList().find(x=>String(x.id)===String(id)); if(j) openDetail(j);
   }
   if(el.matches(".pool-chip")){ el.classList.toggle("on"); syncMajInput(); }
   if(el.matches("#pSave")) saveProfile();
