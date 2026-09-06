@@ -341,11 +341,40 @@ function esc(s){ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&
 
 let state={cat:"",ind:"",level:"",city:"",matchOnly:false,favOnly:false,q:""};
 
+/* ---------- 自动层→岗位卡合一：公告流中含“2027”的校招公告直接入列表(⚡自动收录) ---------- */
+let autoCards=[];
+function buildAutoCards(){
+  autoCards=[];
+  const items=(ann&&Array.isArray(ann.items))?ann.items:[];
+  const orgs=jobs.map(j=>j.org);
+  const cutoff=Date.now()-62*86400000;
+  let k=0;
+  items.forEach(it=>{
+    if(it.kind!=="campus") return;
+    if(!String(it.title).includes("2027")) return;
+    const dt=new Date(it.date); if(isNaN(dt.getTime())||dt.getTime()<cutoff) return;
+    const org=(it.org||String(it.title).slice(0,14)).trim();
+    if(orgs.some(o=>o.includes(org)||org.includes(o))) return;   // 已有人工卡则跳过
+    const cat=(it.channel||"").includes("上海国企")?"上海国企":"央企";
+    autoCards.push({id:"A"+(++k),org,cat,ind:"综合",auto:true,
+      title:String(it.title).slice(0,50),
+      level:"以官方公告为准",minLevel:"",
+      tags:[],cities:["上海","全国"],mainCity:cat==="上海国企"?"上海":"上海及全国(地点见原文)",
+      scope:(it.channel||"官方公告")+" · 自动收录：招聘对象/专业/报名方式详见官方公告原文",
+      hk:"见公告原文",pub:it.date,ddl:null,ddlNote:"滚动发布 · 以官方公告原文为准",
+      duty:String(it.title)+"（系统自动抓取的官方校招公告，结构化详情待人工核实后升级为完整岗位卡）",
+      req:"详见官方公告原文",link:it.url,linkText:"打开官方公告原文（国资委/上海国资委官网）",
+      srcNote:"来源："+(it.channel||"官方栏目")+" · 自动抓取生成的标题级信息，报名前务必打开原文核实截止时间、招聘对象与报名方式。",
+      status:"open",url:it.url});
+  });
+}
+function allList(){ return jobs.concat(autoCards); }
+
 function filtered(){
-  const res = jobs.filter(j=>{
+  const res = allList().filter(j=>{
     if(state.cat && j.cat!==state.cat) return false;
     if(state.ind && j.ind!==state.ind) return false;
-    if(state.level){
+    if(state.level && !j.auto){
       const lv=j.minLevel||"本科及以上";
       if(state.level==="硕士及以上" && !lv.includes("硕士")) return false;
     }
@@ -362,10 +391,11 @@ function filtered(){
     return true;
   });
   res.sort((a,b)=>{
-    const sa = a.status==="open"?0:1, sb = b.status==="open"?0:1;
+    const rk = j=> j.auto?2:(j.status==="open"?0:1);
+    const sa=rk(a), sb=rk(b);
     if(sa!==sb) return sa-sb;
     const ma = matchScore(a,profile), mb = matchScore(b,profile);
-    if(ma && mb && ma.score!==mb.score) return mb.score-ma.score;   // 设置专业后按匹配度优先
+    if(ma && mb && ma.score!==mb.score) return mb.score-ma.score;
     const da = dayDiff(a.ddl), db = dayDiff(b.ddl);
     if(da!==null && db!==null && da!==db) return da-db;
     return new Date(b.pub)-new Date(a.pub);
@@ -397,33 +427,40 @@ function render(){
   // list
   $("#grid").innerHTML = list.map(j=>cardHTML(j)).join("");
   $("#empty").style.display = list.length?"none":"block";
-  $("#countLine").innerHTML = `共 <b>${list.length}</b> 条${profile.on?` · 已按专业匹配度排序(我的专业：${esc((profile.majors||[]).join("、"))})`:" · 智能排序(紧迫优先)"} ${state.favOnly?" · 仅看收藏":""}`;
+  $("#countLine").innerHTML = `共 <b>${list.length}</b> 条${profile.on?` · 已按专业匹配度排序(我的专业：${esc((profile.majors||[]).join("、"))})`:" · 智能排序(紧迫优先)"} ${state.favOnly?" · 仅看收藏":""} ${autoCards.length?`<span style="color:#b8860b"> · ⚡自动收录 ${autoCards.length} 条(官方公告，详情点卡片查看原文)</span>`:""}`;
 }
 
 function cardHTML(j){
-  const m = matchScore(j, profile);
+  const m = j.auto? null : matchScore(j, profile);
   const isFav = favs.includes(j.id);
   const hitSet = new Set(m?m.hits:[]);
-  const stTxt = j.status==="open"?'<span class="st open">报名中</span>':'<span class="st soon">预告</span>';
-  const tags = (j.tags||[]).map(t=>`<span class="tag-item${hitSet.has(t)?" hit":""}">${esc(t)}</span>`).join("");
-  const mHTML = m
-    ? `<div class="mbar"><i style="width:${m.score}%"></i></div><div class="mtext">匹配 ${m.score}%</div>`
-    : `<div class="mbar"><i style="width:8%"></i></div><div class="mtext none">设置专业出匹配度</div>`;
+  const stTxt = j.status==="open"?(j.auto?'<span class="st open">自动收录</span>':'<span class="st open">报名中</span>'):'<span class="st soon">预告</span>';
+  const tags = j.auto
+    ? '<span class="tag-item" style="background:var(--amber-bg);color:var(--amber)">⚡ 官方公告自动收录 · 详情见原文</span>'
+    : (j.tags||[]).map(t=>`<span class="tag-item${hitSet.has(t)?" hit":""}">${esc(t)}</span>`).join("");
+  const mHTML = j.auto
+    ? `<div class="mbar"><i style="width:8%"></i></div><div class="mtext" style="color:#b8860b">⚡ 自动收录</div>`
+    : m
+      ? `<div class="mbar"><i style="width:${m.score}%"></i></div><div class="mtext">匹配 ${m.score}%</div>`
+      : `<div class="mbar"><i style="width:8%"></i></div><div class="mtext none">设置专业出匹配度</div>`;
+  const favHTML = j.auto
+    ? `<a class="fav" href="${esc(j.url||j.link)}" target="_blank" rel="noopener" title="打开官方公告原文" style="text-decoration:none;font-size:17px">↗</a>`
+    : `<button class="fav${isFav?" on":""}" data-act="fav" title="收藏">${isFav?"★":"☆"}</button>`;
   return `<div class="card ${j.status==="soon"?"soon":""}" data-id="${j.id}">
     <div class="c-top">
       <div style="flex:1">
-        <div class="c-badges"><span class="badge c-${esc(j.cat)}">${esc(j.cat)}</span><span class="badge i-${esc(j.ind)}">${esc(j.ind)}</span></div>
+        <div class="c-badges"><span class="badge c-${esc(j.cat)}">${esc(j.cat)}</span><span class="badge i-${esc(j.ind)}">${esc(j.ind)}</span>${j.auto?'<span class="badge k-other">自动收录</span>':""}</div>
         <div class="org">${esc(j.org)}</div>
         <div class="title">${esc(j.title)}${stTxt}</div>
       </div>
-      <button class="fav${isFav?" on":""}" data-act="fav" title="收藏">${isFav?"★":"☆"}</button>
+      ${favHTML}
     </div>
     <div class="c-meta">
       <span>🎓 <b>${esc(j.level)}</b></span>
       <span>📍 <b>${esc(j.mainCity)}</b></span>
-      ${esc(j.hk).includes("✅")||esc(j.hk).includes("接受")||esc(j.hk).includes("优势")?`<span class="hk">🌏 港澳/境外学历适用</span>`:""}
+      ${!j.auto&&(esc(j.hk).includes("✅")||esc(j.hk).includes("接受")||esc(j.hk).includes("优势"))?`<span class="hk">🌏 港澳/境外学历适用</span>`:""}
     </div>
-    <div>${ddlHTML(j)}</div>
+    <div>${j.auto?'<span class="ddl ok">📄 官方公告 · 点“详情”看原文</span>':ddlHTML(j)}</div>
     <div class="tags">${tags}</div>
     <div class="c-bottom">
       ${mHTML}
@@ -589,6 +626,7 @@ document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ ["maskDetail","ma
 
 (async function main(){
   await loadJobs();
+  buildAutoCards();
   renderAnn();
   initFilters();
   if(!jobs.length){
