@@ -87,6 +87,9 @@
   .badge.k-other{background:#f1f1f4;color:#5b6472;}
   .a-new{color:var(--red);font-weight:800;font-size:10.5px;border:1px solid #f0cdc8;background:var(--red-bg);border-radius:7px;padding:0 5px;}
   .ann-empty{font-size:12.5px;color:var(--gray);padding:6px 2px;}
+  .ann-row.cols{flex-wrap:wrap;overflow:visible;}
+  .ann-more{display:inline-block;margin-top:8px;font-size:12.5px;color:var(--blue);background:var(--blue-bg);border-radius:12px;padding:3px 12px;cursor:pointer;user-select:none;}
+  .ann-more:hover{opacity:.85;}
   /* ===== Job cards ===== */
   .grid{display:grid;grid-template-columns:1fr;gap:12px;}
   @media(min-width:820px){.grid{grid-template-columns:1fr 1fr;}}
@@ -214,6 +217,7 @@
       </span>
     </div>
     <div class="ann-row" id="annRow"></div>
+    <div id="annCtrl" style="display:none"></div>
   </div>
 
 
@@ -278,7 +282,7 @@
  *       req 任职要求 | link 官方入口 | srcNote 来源核实
  *       status open=报名中 soon=即将开放
  * ========================================================= */
-let ann = {items:[]}, lastRun = null, loadError = "";
+let ann = {items:[]}, lastRun = null, loadError = "", annExpanded = false;
 
 /* ---------- 状态工具 ---------- */
 function dayDiff(ddlStr){
@@ -553,7 +557,11 @@ function renderAnn(){
     p.style.display="block"; return;
   }
   const today=ann.updated_date||"";
-  const list=items.slice(0,14);
+  const shown=annExpanded?items.length:14;
+  const list=items.slice(0,shown);
+  $("#annRow").className="ann-row"+(annExpanded?" cols":"");
+  $("#annCtrl").style.display=items.length>14?"block":"none";
+  $("#annCtrl").innerHTML=items.length>14?`<span class="ann-more" id="annMore">${annExpanded?"▲ 收起":"▼ 展开全部 "+items.length+" 条公告"}</span>`:"";
   $("#annRow").innerHTML=list.map(it=>`
     <a class="ann-card" href="${esc(it.url)}" target="_blank" rel="noopener" title="打开官方原文">
       <div class="a-t">${esc(it.title)}</div>
@@ -591,7 +599,7 @@ function initFilters(){
   $("#q").addEventListener("input",e=>{state.q=e.target.value;render();});
 }
 document.addEventListener("click",e=>{
-  const el=e.target.closest("[data-act],[data-close],.pool-chip,#pSave");
+  const el=e.target.closest("[data-act],[data-close],.pool-chip,#pSave,#annMore");
   if(!el) return;
   if(el.dataset.close){
     $("#mask"+el.dataset.close[0].toUpperCase()+el.dataset.close.slice(1)).classList.remove("show");
@@ -610,6 +618,7 @@ document.addEventListener("click",e=>{
   }
   if(el.matches(".pool-chip")){ el.classList.toggle("on"); syncMajInput(); }
   if(el.matches("#pSave")) saveProfile();
+  if(el.matches("#annMore")){ annExpanded=!annExpanded; renderAnn(); }
 });
 function syncMajInput(){
   const on=[...document.querySelectorAll("#majPool .pool-chip.on")].map(x=>x.dataset.m);
