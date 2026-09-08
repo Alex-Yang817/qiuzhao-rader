@@ -127,6 +127,17 @@ def crawl_source(src: dict) -> list:
     return out
 
 
+def keep_item(it) -> bool:
+    """只保留 2027 届相关的应届校园招聘公告；剔除 2026 届/2026年度/社招/博士后/公开招聘等噪音。"""
+    t = it.get("title", "")
+    if "2026" in t:
+        return False
+    if any(w in t for w in ("社会招聘", "公开招聘", "博士后", "成熟人才", "人才引进", "劳务派遣", "定向选调", "暑期实习", "冬令营", "训练营")):
+        return False
+    if it.get("kind") == "campus":
+        return True
+    return "2027" in t  # 非“校园/届”字样但明确含 2027 的招聘(如“启动2027年招聘”)保留
+
 def merge(old_items: list, fresh: list, today: str) -> tuple:
     by_url = {it["url"]: it for it in old_items}
     new_count = 0
@@ -181,7 +192,9 @@ def main():
             print(f"[error] {e}", file=sys.stderr)
 
     items, new_count = merge(old_items, all_fresh, today)
+    items = [it for it in items if keep_item(it)]            # 只保留 2027 应届相关
     campus = sum(1 for it in items if it.get("kind") == "campus")
+    new_count = sum(1 for it in items if it.get("first_seen") == today)
 
     payload = {
         "source": " / ".join(s["name"] for s in SOURCES),
