@@ -4,10 +4,65 @@
   "国务院国资委官网·招聘栏目",
   "上海市国资委官网·国企招聘栏目"
  ],
- "updated_at": "2026-09-07T06:40:23+00:00",
- "updated_date": "2026-09-07",
- "campus_count": 24,
+ "updated_at": "2026-09-08T06:37:48+00:00",
+ "updated_date": "2026-09-08",
+ "campus_count": 28,
  "items": [
+  {
+   "title": "中国移动2027校园招聘启动",
+   "url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35884240/content.html",
+   "org": "中国移动",
+   "date": "2026-09-08",
+   "kind": "campus",
+   "channel": "央企·国资委官网",
+   "first_seen": "2026-09-08",
+   "n_seen": 1,
+   "last_seen": "2026-09-08"
+  },
+  {
+   "title": "航空工业集团下属企业启动2027年招聘",
+   "url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35884296/content.html",
+   "org": "航空工业集团下属企业启动",
+   "date": "2026-09-08",
+   "kind": "other",
+   "channel": "央企·国资委官网",
+   "first_seen": "2026-09-08",
+   "n_seen": 1,
+   "last_seen": "2026-09-08"
+  },
+  {
+   "title": "中远海运重工开启2027届全国校园招聘",
+   "url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35884168/content.html",
+   "org": "中远海运重工开启",
+   "date": "2026-09-08",
+   "kind": "campus",
+   "channel": "央企·国资委官网",
+   "first_seen": "2026-09-08",
+   "n_seen": 1,
+   "last_seen": "2026-09-08"
+  },
+  {
+   "title": "上汽集团2027届全球校园招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260908/57b74b0f5535440ca8f79fa73916530d.html",
+   "org": "上汽集团",
+   "date": "2026-09-08",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-08",
+   "n_seen": 1,
+   "last_seen": "2026-09-08"
+  },
+  {
+   "title": "申能集团2027届校园招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260908/6d39e0bb73f04f9a92bc9646f6e358d2.html",
+   "org": "申能集团",
+   "date": "2026-09-08",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-08",
+   "n_seen": 1,
+   "last_seen": "2026-09-08"
+  },
   {
    "title": "航天科工九院2027届校园招聘全面启动",
    "url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35866983/content.html",
@@ -16,8 +71,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-07",
-   "n_seen": 1,
-   "last_seen": "2026-09-07"
+   "n_seen": 2,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "浦发银行2027年度全球校园招聘启动",
@@ -27,8 +82,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-07",
-   "n_seen": 1,
-   "last_seen": "2026-09-07"
+   "n_seen": 2,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "陕西飞机工业有限责任公司2027届校园招聘正式启动",
@@ -37,8 +92,8 @@
    "date": "2026-09-04",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -48,8 +103,8 @@
    "date": "2026-09-04",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -59,8 +114,8 @@
    "date": "2026-09-03",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -71,8 +126,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "中国东方航空技术有限公司2026年度招聘启事",
@@ -81,8 +136,8 @@
    "date": "2026-09-02",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -92,8 +147,8 @@
    "date": "2026-09-02",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -103,8 +158,8 @@
    "date": "2026-09-02",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -114,8 +169,8 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -125,8 +180,8 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -136,8 +191,8 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -147,8 +202,8 @@
    "date": "2026-09-01",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -158,8 +213,8 @@
    "date": "2026-08-31",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -169,8 +224,8 @@
    "date": "2026-08-28",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -180,8 +235,8 @@
    "date": "2026-08-27",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -191,8 +246,8 @@
    "date": "2026-08-27",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -202,8 +257,8 @@
    "date": "2026-08-21",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -213,8 +268,8 @@
    "date": "2026-08-20",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -224,8 +279,8 @@
    "date": "2026-08-13",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -235,8 +290,8 @@
    "date": "2026-08-12",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -246,8 +301,8 @@
    "date": "2026-08-10",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -257,8 +312,8 @@
    "date": "2026-08-06",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -268,8 +323,8 @@
    "date": "2026-08-04",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -279,8 +334,8 @@
    "date": "2026-07-31",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -290,8 +345,8 @@
    "date": "2026-07-30",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -301,8 +356,8 @@
    "date": "2026-07-29",
    "kind": "campus",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -312,8 +367,8 @@
    "date": "2026-07-28",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -368,8 +423,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "浦发银行2026年“Call浦新星”暑期实习生计划启动",
@@ -379,8 +434,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "2026年奉贤区区属国有企业招聘公告",
@@ -390,8 +445,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "“夏日骐骥”上海国资国企2026年 暑期实习启动！",
@@ -401,8 +456,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "2026年青浦区区管企业统一招聘公告",
@@ -412,8 +467,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "上海建科咨询集团暑期实习暨2027届秋招提前批次招聘启动",
@@ -423,8 +478,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "联和投资公司2026年博士后招聘启动",
@@ -434,8 +489,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "上汽集团2027届暑期实习生招聘启动",
@@ -445,8 +500,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "上海农商银行2027届暑期实习生招聘启动",
@@ -456,8 +511,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "2026年崇明区区管企业公开招聘",
@@ -467,8 +522,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "国务院国资委委属事业单位2026年度公开招聘公告",
@@ -477,8 +532,8 @@
    "date": "2026-05-14",
    "kind": "other",
    "first_seen": "2026-09-05",
-   "n_seen": 5,
-   "last_seen": "2026-09-07",
+   "n_seen": 6,
+   "last_seen": "2026-09-08",
    "channel": "央企·国资委官网"
   },
   {
@@ -489,8 +544,8 @@
    "kind": "other",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-05",
-   "n_seen": 4,
-   "last_seen": "2026-09-07"
+   "n_seen": 5,
+   "last_seen": "2026-09-08"
   },
   {
    "title": "2026年金山区区属国企公开招聘",
