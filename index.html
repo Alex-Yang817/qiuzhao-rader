@@ -353,8 +353,10 @@ function buildAutoCards(){
     if(it.kind!=="campus") return;
     if(!String(it.title).includes("2027")) return;
     const dt=new Date(it.date); if(isNaN(dt.getTime())||dt.getTime()<cutoff) return;
-    const org=(it.org||String(it.title).slice(0,14)).trim();
-    if(orgs.some(o=>o.includes(org)||org.includes(o))) return;   // 已有人工卡则跳过
+    const norm=s=>String(s||"").replace(/开启|启动|全面|正式|火热|进行中|招聘|招录|计划/gi,"").replace(/\s+/g,"");
+    const org=norm(it.org||String(it.title).slice(0,14));
+    if(!org) return;
+    if(orgs.some(o=>norm(o).includes(org)||org.includes(norm(o)))) return;   // 与人工卡归一化去重(避免“XX开启2027”噪声重复)
     const cat=(it.channel||"").includes("上海国企")?"上海国企":"央企";
     autoCards.push({id:"A"+(++k),org,cat,ind:"综合",auto:true,
       title:String(it.title).slice(0,50),
