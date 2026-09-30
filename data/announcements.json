@@ -4,10 +4,32 @@
   "国务院国资委官网·招聘栏目",
   "上海市国资委官网·国企招聘栏目"
  ],
- "updated_at": "2026-09-29T06:39:50+00:00",
- "updated_date": "2026-09-29",
- "campus_count": 60,
+ "updated_at": "2026-09-30T06:40:24+00:00",
+ "updated_date": "2026-09-30",
+ "campus_count": 62,
  "items": [
+  {
+   "title": "中国通信服务四川公司2027届校园招聘",
+   "url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35997025/content.html",
+   "org": "中国通信服务四川公司",
+   "date": "2026-09-30",
+   "kind": "campus",
+   "channel": "央企·国资委官网",
+   "first_seen": "2026-09-30",
+   "n_seen": 1,
+   "last_seen": "2026-09-30"
+  },
+  {
+   "title": "上海交易集团2027届校园招聘启动",
+   "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/20260930/302bbf482c784c10a728c69c0e429c6f.html",
+   "org": "上海交易集团",
+   "date": "2026-09-30",
+   "kind": "campus",
+   "channel": "上海国企·上海国资委官网",
+   "first_seen": "2026-09-30",
+   "n_seen": 1,
+   "last_seen": "2026-09-30"
+  },
   {
    "title": "中航技2027届校园招聘正式启动",
    "url": "http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35992780/content.html",
@@ -16,8 +38,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-29",
-   "n_seen": 1,
-   "last_seen": "2026-09-29"
+   "n_seen": 2,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "国机集团总部及下属企业“青蓝计划”2027届管培生招聘全面启动",
@@ -27,8 +49,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-29",
-   "n_seen": 1,
-   "last_seen": "2026-09-29"
+   "n_seen": 2,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国东方航空2027全球校园招聘正式启动",
@@ -38,8 +60,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-29",
-   "n_seen": 1,
-   "last_seen": "2026-09-29"
+   "n_seen": 2,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中远海运散运2027届校园招聘",
@@ -49,8 +71,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-28",
-   "n_seen": 2,
-   "last_seen": "2026-09-29"
+   "n_seen": 3,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "上海建科咨询集团2027届秋招开启",
@@ -60,8 +82,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-28",
-   "n_seen": 2,
-   "last_seen": "2026-09-29"
+   "n_seen": 3,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "百联股份2027届校园招聘启动",
@@ -71,8 +93,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-28",
-   "n_seen": 2,
-   "last_seen": "2026-09-29"
+   "n_seen": 3,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国大唐2027年校园招聘正式启动",
@@ -82,8 +104,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-24",
-   "n_seen": 6,
-   "last_seen": "2026-09-29"
+   "n_seen": 7,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "湖南航天2027年校园招聘正式启动",
@@ -93,8 +115,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-24",
-   "n_seen": 6,
-   "last_seen": "2026-09-29"
+   "n_seen": 7,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "航空工业集团下属企业启动2027届校园招聘",
@@ -104,8 +126,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-23",
-   "n_seen": 7,
-   "last_seen": "2026-09-29"
+   "n_seen": 8,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "上海银行2027届校园招聘启动",
@@ -115,8 +137,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-23",
-   "n_seen": 7,
-   "last_seen": "2026-09-29"
+   "n_seen": 8,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "国泰海通2027届秋季校园招聘启动",
@@ -126,8 +148,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-23",
-   "n_seen": 7,
-   "last_seen": "2026-09-29"
+   "n_seen": 8,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "矿冶集团2027届校园招聘正式启动！",
@@ -137,8 +159,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-22",
-   "n_seen": 8,
-   "last_seen": "2026-09-29"
+   "n_seen": 9,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "“骐骥秋实”上海国资国企2027届高校毕业生校园招聘正式启动！",
@@ -148,8 +170,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-28",
-   "n_seen": 2,
-   "last_seen": "2026-09-29"
+   "n_seen": 3,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国远洋海运集团2027全球校园招聘",
@@ -159,8 +181,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-21",
-   "n_seen": 9,
-   "last_seen": "2026-09-29"
+   "n_seen": 10,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国铝业集团有限公司2027年度高校毕业生招聘",
@@ -170,8 +192,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-20",
-   "n_seen": 10,
-   "last_seen": "2026-09-29"
+   "n_seen": 11,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中通服咨询设计研究院2027校招火热开启",
@@ -181,8 +203,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-20",
-   "n_seen": 10,
-   "last_seen": "2026-09-29"
+   "n_seen": 11,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "锦江国际集团2027届校园招聘启动",
@@ -192,8 +214,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-20",
-   "n_seen": 10,
-   "last_seen": "2026-09-29"
+   "n_seen": 11,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "申能股份2027届校园招聘启动",
@@ -203,8 +225,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-20",
-   "n_seen": 10,
-   "last_seen": "2026-09-29"
+   "n_seen": 11,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国电气装备集团2027届校园招聘正式启动",
@@ -214,8 +236,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-18",
-   "n_seen": 12,
-   "last_seen": "2026-09-29"
+   "n_seen": 13,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "航天精工2027届校园招聘正式启动",
@@ -225,8 +247,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-18",
-   "n_seen": 12,
-   "last_seen": "2026-09-29"
+   "n_seen": 13,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中电信无人科技2027年校园招聘正式启动",
@@ -236,8 +258,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-17",
-   "n_seen": 13,
-   "last_seen": "2026-09-29"
+   "n_seen": 14,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国有研科技集团有限公司2027届校园招聘正式启动",
@@ -247,8 +269,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-17",
-   "n_seen": 13,
-   "last_seen": "2026-09-29"
+   "n_seen": 14,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "上实集团2027届校园招聘启动",
@@ -258,8 +280,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-17",
-   "n_seen": 13,
-   "last_seen": "2026-09-29"
+   "n_seen": 14,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "上海建工2027届校园招聘启动",
@@ -269,8 +291,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-17",
-   "n_seen": 13,
-   "last_seen": "2026-09-29"
+   "n_seen": 14,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国电子下属企业2027届招聘启动",
@@ -280,8 +302,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-16",
-   "n_seen": 14,
-   "last_seen": "2026-09-29"
+   "n_seen": 15,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国通服海南公司2027届校园招聘",
@@ -291,8 +313,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-16",
-   "n_seen": 14,
-   "last_seen": "2026-09-29"
+   "n_seen": 15,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国电子2027届校园招聘正式启动",
@@ -302,8 +324,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-15",
-   "n_seen": 15,
-   "last_seen": "2026-09-29"
+   "n_seen": 16,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国汽研2027届校园招聘正式启动",
@@ -313,8 +335,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-15",
-   "n_seen": 15,
-   "last_seen": "2026-09-29"
+   "n_seen": 16,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中广核2027届校园招聘正式启动",
@@ -324,8 +346,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-15",
-   "n_seen": 15,
-   "last_seen": "2026-09-29"
+   "n_seen": 16,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国融通集团2027届秋季校园招聘",
@@ -335,8 +357,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-15",
-   "n_seen": 15,
-   "last_seen": "2026-09-29"
+   "n_seen": 16,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中汽中心2027届校园招聘正式启动",
@@ -346,8 +368,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-15",
-   "n_seen": 15,
-   "last_seen": "2026-09-29"
+   "n_seen": 16,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "河南航天工业有限责任公司2027届校园招聘正式启动",
@@ -357,8 +379,8 @@
    "kind": "campus",
    "channel": "央企·国资委官网",
    "first_seen": "2026-09-15",
-   "n_seen": 15,
-   "last_seen": "2026-09-29"
+   "n_seen": 16,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "哈电集团2027届校园招聘正式启动",
@@ -401,8 +423,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-14",
-   "n_seen": 16,
-   "last_seen": "2026-09-29"
+   "n_seen": 17,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "中国电科2027届校园招聘正式启动",
@@ -478,8 +500,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-08",
-   "n_seen": 23,
-   "last_seen": "2026-09-29"
+   "n_seen": 24,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "申能集团2027届校园招聘启动",
@@ -489,8 +511,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-08",
-   "n_seen": 23,
-   "last_seen": "2026-09-29"
+   "n_seen": 24,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "航天科工九院2027届校园招聘全面启动",
@@ -511,8 +533,8 @@
    "kind": "campus",
    "channel": "上海国企·上海国资委官网",
    "first_seen": "2026-09-08",
-   "n_seen": 23,
-   "last_seen": "2026-09-29"
+   "n_seen": 24,
+   "last_seen": "2026-09-30"
   },
   {
    "title": "陕西飞机工业有限责任公司2027届校园招聘正式启动",
