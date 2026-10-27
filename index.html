@@ -96,6 +96,7 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 15px;display:flex;flex-direction:column;gap:8px;position:relative;transition:.15s;}
   .card:hover{box-shadow:0 4px 14px rgba(20,30,50,.09);transform:translateY(-1px);}
   .card.soon{opacity:.86;background:#fbfbfc;}
+  .card.closed{opacity:.6;background:#fafbfc;filter:grayscale(.35);}
   .c-top{display:flex;align-items:flex-start;gap:8px;}
   .fav{flex:none;font-size:19px;line-height:1;color:#c9ced6;transition:.15s;margin-top:2px;}
   .fav:hover{transform:scale(1.15);}
@@ -118,6 +119,7 @@
   .title .st{font-size:11px;font-weight:700;border-radius:8px;padding:1px 7px;margin-left:6px;vertical-align:2px;}
   .st.open{background:var(--green-bg);color:var(--green);}
   .st.soon{background:var(--amber-bg);color:var(--amber);}
+  .st.closed{background:#f1f1f4;color:#8a929e;}
   .c-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--gray);}
   .c-meta b{color:var(--text);font-weight:600;}
   .ddl{font-size:12.5px;}
@@ -242,6 +244,7 @@
       </div>
       <label class="switch ml-auto" id="switchFit"><input type="checkbox" id="fMatchOnly"><span class="dot"></span><span>仅看高匹配(≥60)</span></label>
       <label class="switch" id="switchFav"><input type="checkbox" id="fFavOnly"><span class="dot"></span><span>仅看收藏</span></label>
+      <label class="switch"><input type="checkbox" id="fHideClosed" checked><span class="dot"></span><span>隐藏已截止</span></label>
     </div>
     <div class="chips" id="indChips"></div>
     <div class="count-line" id="countLine"></div>
@@ -292,6 +295,7 @@ function dayDiff(ddlStr){
 }
 function ddlHTML(j){
   const d = dayDiff(j.ddl);
+  if(j.status==="closed") return '<span class="ddl" style="color:#8a929e">✕ 已截止（关注春季补招/下一批次）</span>';
   if(j.status==="soon") return '<span class="ddl warn">🔔 即将开放</span>';
   if(d===null) return '<span class="ddl ok">投递中 · 滚动截止</span>';
   if(d<0)  return '<span class="ddl danger">⚠️ 已截止</span>';
@@ -343,7 +347,7 @@ function matchScore(j, p){
 const $ = s=>document.querySelector(s);
 function esc(s){ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 
-let state={cat:"",ind:"",level:"",city:"",matchOnly:false,favOnly:false,q:""};
+let state={cat:"",ind:"",level:"",city:"",matchOnly:false,favOnly:false,q:"",hideClosed:true};
 
 /* ---------- 自动层→岗位卡合一：公告流中含“2027”的校招公告直接入列表(⚡自动收录) ---------- */
 let autoCards=[];
@@ -378,6 +382,7 @@ function allList(){ return jobs.concat(autoCards); }
 
 function filtered(){
   const res = allList().filter(j=>{
+    if(state.hideClosed && j.status==="closed") return false;
     if(state.cat && j.cat!==state.cat) return false;
     if(state.ind && j.ind!==state.ind) return false;
     if(state.level && !j.auto){
@@ -397,7 +402,7 @@ function filtered(){
     return true;
   });
   res.sort((a,b)=>{
-    const rk = j=> j.auto?2:(j.status==="open"?0:1);
+    const rk = j=> j.auto?2:(j.status==="open"?0:(j.status==="soon"?1:3));
     const sa=rk(a), sb=rk(b);
     if(sa!==sb) return sa-sb;
     const ma = matchScore(a,profile), mb = matchScore(b,profile);
@@ -433,14 +438,14 @@ function render(){
   // list
   $("#grid").innerHTML = list.map(j=>cardHTML(j)).join("");
   $("#empty").style.display = list.length?"none":"block";
-  $("#countLine").innerHTML = `共 <b>${list.length}</b> 条${profile.on?` · 已按专业匹配度排序(我的专业：${esc((profile.majors||[]).join("、"))})`:" · 智能排序(紧迫优先)"} ${state.favOnly?" · 仅看收藏":""} ${autoCards.length?`<span style="color:#b8860b"> · ⚡自动收录 ${autoCards.length} 条(官方公告，详情点卡片查看原文)</span>`:""}`;
+  $("#countLine").innerHTML = `共 <b>${list.length}</b> 条${profile.on?` · 已按专业匹配度排序(我的专业：${esc((profile.majors||[]).join("、"))})`:" · 智能排序(紧迫优先)"} ${state.favOnly?" · 仅看收藏":""}${state.hideClosed?` · 已隐藏 ${jobs.filter(j=>j.status==="closed").length} 条已截止`:""} ${autoCards.length?`<span style="color:#b8860b"> · ⚡自动收录 ${autoCards.length} 条(官方公告，详情点卡片查看原文)</span>`:""}`;
 }
 
 function cardHTML(j){
   const m = j.auto? null : matchScore(j, profile);
   const isFav = favs.includes(j.id);
   const hitSet = new Set(m?m.hits:[]);
-  const stTxt = j.status==="open"?(j.auto?'<span class="st open">自动收录</span>':'<span class="st open">报名中</span>'):'<span class="st soon">预告</span>';
+  const stTxt = j.status==="open"?(j.auto?'<span class="st open">自动收录</span>':'<span class="st open">报名中</span>'):(j.status==="closed"?'<span class="st closed">已截止</span>':'<span class="st soon">预告</span>');
   const tags = j.auto
     ? '<span class="tag-item" style="background:var(--amber-bg);color:var(--amber)">⚡ 官方公告自动收录 · 详情见原文</span>'
     : (j.tags||[]).map(t=>`<span class="tag-item${hitSet.has(t)?" hit":""}">${esc(t)}</span>`).join("");
@@ -452,7 +457,8 @@ function cardHTML(j){
   const favHTML = j.auto
     ? `<a class="fav" href="${esc(j.url||j.link)}" target="_blank" rel="noopener" title="打开官方公告原文" style="text-decoration:none;font-size:17px">↗</a>`
     : `<button class="fav${isFav?" on":""}" data-act="fav" title="收藏">${isFav?"★":"☆"}</button>`;
-  return `<div class="card ${j.status==="soon"?"soon":""}" data-id="${j.id}">
+  const cardCls = j.status==="soon"?"soon":(j.status==="closed"?"closed":"");
+  return `<div class="card ${cardCls}" data-id="${j.id}">
     <div class="c-top">
       <div style="flex:1">
         <div class="c-badges"><span class="badge c-${esc(j.cat)}">${esc(j.cat)}</span><span class="badge i-${esc(j.ind)}">${esc(j.ind)}</span>${j.auto?'<span class="badge k-other">自动收录</span>':""}</div>
@@ -484,7 +490,7 @@ function openDetail(j){
   $("#modalDetail").innerHTML = `
     <div class="m-head">
       <div>
-        <div class="c-badges"><span class="badge c-${esc(j.cat)}">${esc(j.cat)}</span><span class="badge i-${esc(j.ind)}">${esc(j.ind)}</span> ${j.status==="open"?'<span class="badge c-央企" style="background:var(--green-bg);color:var(--green)">报名中</span>':'<span class="badge" style="background:var(--amber-bg);color:var(--amber)">预告/未开放</span>'}</div>
+        <div class="c-badges"><span class="badge c-${esc(j.cat)}">${esc(j.cat)}</span><span class="badge i-${esc(j.ind)}">${esc(j.ind)}</span> ${j.status==="open"?'<span class="badge c-央企" style="background:var(--green-bg);color:var(--green)">报名中</span>':(j.status==="closed"?'<span class="badge" style="background:#f1f1f4;color:#8a929e">已截止</span>':'<span class="badge" style="background:var(--amber-bg);color:var(--amber)">预告/未开放</span>')}</div>
         <div style="font-size:19px;font-weight:800;margin-top:4px">${esc(j.org)}</div>
         <div style="color:var(--gray);font-size:13.5px">${esc(j.title)}</div>
       </div>
@@ -596,6 +602,7 @@ function initFilters(){
   }));
   $("#fMatchOnly").addEventListener("change",e=>{state.matchOnly=e.target.checked;render();});
   $("#fFavOnly").addEventListener("change",e=>{state.favOnly=e.target.checked;render();});
+  $("#fHideClosed").addEventListener("change",e=>{state.hideClosed=e.target.checked;render();});
   $("#q").addEventListener("input",e=>{state.q=e.target.value;render();});
 }
 document.addEventListener("click",e=>{
