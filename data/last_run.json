@@ -1,13 +1,13 @@
 {
- "ran_at": "2026-11-24T17:55:22+00:00",
+ "ran_at": "2026-11-25T17:23:16+00:00",
  "new_count": 0,
  "total_items": 84,
  "campus_items": 82,
  "sources": [
   {
    "name": "国务院国资委官网·招聘栏目",
-   "ok": false,
-   "got": 0
+   "ok": true,
+   "got": 30
   },
   {
    "name": "上海市国资委官网·国企招聘栏目",
@@ -15,7 +15,5 @@
    "got": 15
   }
  ],
- "errors": [
-  "抓取失败 国务院国资委官网·招聘栏目: <urlopen error [Errno -3] Temporary failure in name resolution>"
- ]
+ "errors": []
 }
